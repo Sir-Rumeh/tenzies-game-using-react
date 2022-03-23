@@ -8,6 +8,10 @@ body {
 }
 
 .main {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	background-color: white;
 	height: auto;
 	display: flex;
@@ -16,6 +20,18 @@ body {
 	justify-content: center;
 	align-items: center;
 	padding: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+	.container {
+		transform: translateX();
+	}
+	button {
+		transform: translateX();
+	}
+	.info-bar {
+		transform: translateX();
+	}
 }
 
 .container {
@@ -64,7 +80,7 @@ button {
 	font-size: 1.3rem;
 	text-align: center;
 	justify-content: space-between;
-	width: 40rem;
+	max-width: 40rem;
 }
 
 .description p {
