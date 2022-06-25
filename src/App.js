@@ -82,7 +82,7 @@ function App() {
 					: die;
 			})
 		);
-		console.log("tsting");
+		// console.log("tsting");
 	}
 
 	// initialize/display dice
