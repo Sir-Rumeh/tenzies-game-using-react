@@ -107,7 +107,7 @@ function App() {
 			<div className="container">{diceElements}</div>
 			<RollButton rollNewDice={rollNewDice} tenzies={tenzies} />
 			<InfoBar clicks={clicks} />
-			{/* <script>{console.log("hello")}</script> */}
+			<script>{console.log("hello")}</script>
 		</div>
 	);
 }
