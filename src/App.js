@@ -4,12 +4,12 @@ import React, { useEffect, useState } from "react";
 import { nanoid } from "nanoid";
 // components
 import Die from "./Die";
-import InfoBar from "./InfoBar";
 import RollButton from "./RollButton";
+import InfoBar from "./InfoBar";
 
 function App() {
 	// initialize states
-	const [dice, setDice] = useState(allNewDice());
+	const [dice, setDice] = useState(allNewDice);
 	const [tenzies, setTenzies] = useState(false);
 	const [clicks, setClicks] = useState(0);
 
@@ -63,11 +63,13 @@ function App() {
 			setClicks(0);
 		}
 
+		// set number of clicks per game
 		if (!tenzies) {
 			let moves = e.currentTarget;
-			moves.clicks = clicks + 1;
-			setClicks(moves.clicks);
-			console.log(clicks);
+			moves = clicks + 1;
+			setClicks(moves);
+			// console.log clicks after a while
+			setTimeout(() => console.log(clicks), 1000);
 		} else {
 			setClicks(0);
 		}
@@ -107,7 +109,7 @@ function App() {
 			<div className="container">{diceElements}</div>
 			<RollButton rollNewDice={rollNewDice} tenzies={tenzies} />
 			<InfoBar clicks={clicks} />
-			{/* <script>{console.log("hello")}</script> */}
+			<script>{console.log("hello")}</script>
 		</div>
 	);
 }
