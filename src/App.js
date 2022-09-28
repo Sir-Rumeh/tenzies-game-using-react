@@ -101,10 +101,10 @@ function App() {
 		<div className="main">
 			{/* <h1 className="title">tenzies</h1> */}
 			<div className="description">
-				<p>
+				{/* <p>
 					Roll until all dice are the same. click each die to
 					freeze it at its current value between rolls.
-				</p>
+				</p> */}
 			</div>
 			<div className="container">{diceElements}</div>
 			<RollButton rollNewDice={rollNewDice} tenzies={tenzies} />
