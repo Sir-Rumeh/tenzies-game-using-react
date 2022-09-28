@@ -99,7 +99,7 @@ function App() {
 
 	return (
 		<div className="main">
-			<h1 className="title">tenzies</h1>
+			{/* <h1 className="title">tenzies</h1> */}
 			<div className="description">
 				<p>
 					Roll until all dice are the same. click each die to
